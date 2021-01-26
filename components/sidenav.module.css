@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Nuninto-Bold";
+    src: url("../public/fonts/Nunito-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto";
+    src: url("../public/fonts/Nunito-Regular.ttf");
+  }
+  
+  .sidenav {
+    float: left;
+    width: 35%;
+    height: 100vh;
+    background: #8d74cc;
+    overflow: hidden;
+  }
+  
+  .container_left {
+    padding-top: 7%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .container_left > img{
+   
+  }
+  .headerName {
+    font-family: "Nuninto-Bold";
+    font-size: 1.5rem;
+  }
+  
+  .headerCallOut {
+    font-family: "Nuninto-Bold";
+    font-size: 2rem;
+    text-align: start;
+    margin-top: 2rem;
+  }
+  
+  .headerjoinmsg {
+    font-family: "Nunito";
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  .headerImage {
+    margin-top: 7%;
+    margin-left: 10%;
+  }
+  

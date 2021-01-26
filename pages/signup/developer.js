@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-export class SignUpIndex extends Component {
+export class DeveloperSignUp extends Component {
     render() {
         return (
             <div>
-                <h1>Sign Up Page</h1>
+                <h1>Developer Sign Up Page</h1>
             </div>
         )
     }
 }
 
-export default SignUpIndex
+export default DeveloperSignUp

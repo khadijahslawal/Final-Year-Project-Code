@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "Nuninto-Semi";
+    src: url("../public/fonts/Nunito-SemiBold.ttf");
+  }
+
+
+.main{
+    height: 100vh;
+    /* width: 100vw; */
+    overflow-y: hidden;
+ }
+ 
+ .container_right{
+     padding: 0% 8%;
+ }
+ 
+ 
+ .continue{
+     font-size: 1.2rem;
+     font-family: "Nuninto-Semi";
+     font-weight: bold;
+     margin-top: 10%;
+ }
+ .developer{
+     margin-top: 10%;
+     margin-left: 5%;
+     width: 90%;
+     height: 10rem;
+     border-radius: 16px;
+     background-color: #ECEAF2;
+ }
+
+ .developer > img{
+     width: 3.75rem;
+     align-self: center;
+     
+ }
+ 
+ .developer:hover{
+    border: 3px solid #8D74CC;
+ }
+ .developer:focus{
+    border: 3px solid #8D74CC;
+ }
+ 
+ .ownerFeatures{
+     float: right;
+     margin-right: 30%;
+     margin-top: 4%;
+     font-size: 0.8rem;
+ }
+
+ .ownerFeatures > p{
+     font-family: "Nuninto-Semi";
+ }
+ 
+ .investorFeatures{
+    float: right;
+    margin-right: 35%;
+    margin-top: 6%;
+    font-size: 0.8rem;
+ }
+
+ .investorFeatures > p{
+    font-family: "Nuninto-Semi";
+}
+
+ 
+ .investor{
+      margin-top: 5%;
+     width: 90%;
+     height: 10rem;
+     border-radius: 16px;
+     background-color: #ECEAF2;
+     margin-left: 5%;
+ }
+ 
+ .investor:hover{
+     border: 3px solid #8D74CC;
+ }
+
+ .investor:focus{
+    border: 3px solid #8D74CC;
+}
+
+.investor > img{
+    width: 3.75rem;
+    align-self: center;
+}
+ .developerImage{
+     margin-top: 7%;
+     margin-left: 4%;
+    
+ }
