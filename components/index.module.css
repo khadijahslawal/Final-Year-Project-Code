@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Nuninto-Semi";
+    src: url("../public/fonts/Nunito-SemiBold.ttf");
+  }
+
+.body{
+    background: #B198EF;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header{
+    position: fixed;
+    top: 50%;
+    left: 53%;
+    margin-top: -50px;
+    margin-left: -100px;
+    text-align: center;
+}
+
+.header > p{
+    font-family: "Nuninto-Semi";
+    font-size: 1.5rem;
+}

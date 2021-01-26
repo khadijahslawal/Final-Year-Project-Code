@@ -15,3 +15,4 @@ app.prepare().then(() => {
     console.log("Ready on localhost:3000");
   });
 });
+
