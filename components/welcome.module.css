@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Nuninto-Bold";
+    src: url("../public/fonts/Nunito-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto-Semi";
+    src: url("../public/fonts/Nunito-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto";
+    src: url("../public/fonts/Nunito-Regular.ttf");
+  }
+  
+  .welcomePage {
+    height: 100vh;
+    background: url("../public/images/ethwalk.png");
+    background-repeat: no-repeat;
+    background-size: 30rem 25rem;
+    background-position: center right;
+    background-attachment: fixed;
+    overflow-y: hidden;
+  }
+  
+  .leftSection > img {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .leftSection {
+    margin: 5%
+  }
+  
+  .welcomeText > h1{
+      font-family: "Nuninto-Bold";
+      margin: 2rem 0rem;
+  }
+  
+  
+  .welcomeText > p{
+      font-family: "Nuninto-Semi";
+  }
+  
+  .btnfullFld > button {
+      margin-top: 4rem;
+      width: 10rem;
+      height: 2.5rem;
+      border-radius: 10px;
+      background: #8d74cc;
+      color: #000000;
+      font-family: "Nuninto-Semi";
+      text-transform: capitalize;
+      border: none;
+    }
+    
+    .btnfullFld > button:hover {
+      border: 2px solid #8d74cc;
+      background: #fff;
+    }
+    

@@ -6,5 +6,7 @@ routes.add("/", "/index");
 routes.add("/signup",  "/signup/index");
 routes.add("/signup/developer", "/signup/developer");
 routes.add("/signup/investor", "/signup/investor");
+routes.add("/signup/welcome", "/signup/welcome");
+routes.add("/home/:address", "/home/index");
 
 module.exports = routes;
