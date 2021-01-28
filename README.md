@@ -3,8 +3,11 @@
 # Asset Tokenization Blockchain
 
 ## Installations
-
+Install Node.js (10.13.16 and above)
+Install NPM (node package manager- latets version ideally)
+Install chrome web browser
 Install MetaMask Wallet - Chrome Webstore
+
 
 ### Requirements to run the application
 1. Use Chrome Web browser
