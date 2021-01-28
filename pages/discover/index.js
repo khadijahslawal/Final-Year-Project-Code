@@ -1,32 +1,28 @@
 import React, { Component } from "react";
-import styles from "../../components/investorhome.module.css";
-import Investor from "../../blockchain/investor";
+import Property from "../../components/propertycard";
+import { nondeployed } from "./nondeployed";
+import styles from "../../components/discover.module.css";
+import verifiedPropertyImage from "../../public/images/propImage.jpg";
+import factory from "../../blockchain/propertyFactory";
+import { Router } from "../../routes";
+import { Link } from "../../routes";
 import logo from "../../public/icons/mozy.png";
-import { Link, Router } from "../../routes";
 import profileIcon from "../../public/icons/user.png";
 import DiscoverIcon from "../../public/icons/discover.png";
 import DashboardIcon from "../../public/icons/dashboard.png";
 import VotingIcon from "../../public/icons/manualvoting.png";
 
-export class InvestorIndex extends Component {
-  static async getInitialProps(props) {
-    const investor = Investor(props.query.address);
-    const summary = await investor.methods.getInvestorDetails().call();
-    return {
-      address: props.query.address,
-      firstName: summary[0],
-      lastName: summary[1],
-      email: summary[2],
-      investorAddress: summary[3],
-    }
+export class DiscoverIndex extends Component {
+  static async getInitialProps() {
+    const property = await factory.methods
+      .getDeployedProperties()
+      .call();
+    return { property: property };
   }
-  // onSubmit() {
-  //   Router.pushRoute(`profile/${this.props.investorAddress}`);
-  // };
   render() {
     return (
       <>
-        <div className={styles.sideNav} style={{ float: "left" }}>
+      <div className={styles.sideNav} style={{ float: "left" }}>
           <Link route={`/home/${this.props.investorAddress}`}>
             <img
               src={logo}
@@ -96,12 +92,34 @@ export class InvestorIndex extends Component {
             </li>
           </ul>
           </div>
-          <main className={styles.main} style={{ float: "right", width: "82%" }}>
-            <p>{this.props.firstName}</p>
-          </main>
+        <main className={styles.main} style={{ float: "right", width: "82%" }}>
+          <div className={styles.headerSection}>
+            <h3>Discover Properties</h3>
+          </div>
+          <section className={styles.propertiesList}>
+            {nondeployed.map((property) => {
+              return <Property key={property.id} property={property} />;
+            })}
+          </section>
+          <section>
+            <div className={styles.headerSection}>
+              <h3>Tokenized Property</h3>
+              <article className={styles.property}>
+                <img src={verifiedPropertyImage} />
+              </article>
+            </div>
+            <div className={styles.btnfullFld}>
+            <Link route={`deployed/${this.props.property}`}>
+              <button>
+                Explore Tokenized Property
+              </button>
+              </Link>
+            </div>
+          </section>
+        </main>
       </>
     );
   }
 }
 
-export default InvestorIndex;
+export default DiscoverIndex;

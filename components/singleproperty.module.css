@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Nuninto-Semi";
+    src: url("../public/fonts/Nunito-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto-Bold";
+    src: url("../public/fonts/Nunito-Bold.ttf");
+  }
+  
+  .property {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: fit-content;
+  }
+  
+  .property > img {
+    width: 18rem;
+    height: 10rem;
+    border-radius: 1.5rem;
+  }
+  
+  .detailsSection {
+    display: flex;
+  }
+  
+  .detailsSection > p {
+    color: #7037ff;
+    font-size: 1rem;
+    margin-left: 3rem;
+    font-family: "Nuninto-Semi";
+  }
+  
+  .propertyDetails  > #top{
+      font-family: "Nuninto-Bold";
+      font-size: 1rem;
+  }
+  
+  .propertyDetails  > #bottom{
+      font-family: "Nuninto-Semi";
+      font-size: 0.8rem;
+  }
+  

@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "Nuninto-Semi";
+    src: url("../public/fonts/Nunito-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto-Bold";
+    src: url("../public/fonts/Nunito-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto";
+    src: url("../public/fonts/Nunito-Regular.ttf");
+  }
+  
+  .main {
+    padding: 3rem 0rem 0rem 0rem;
+    display: flex;
+  }
+  
+  .left {
+    margin-left: 3rem;
+    width: 500px;
+  }
+  
+  .left > h1 {
+    font-family: "Nuninto-Semi";
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .left > img {
+    border-radius: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .left > h3 {
+    color: #818080;
+    font-family: "Nuninto-Semi";
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .utilities {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bedroom > p {
+    font-family: "Nuninto";
+    font-size: 1rem;
+  }
+  
+  .utilitiesValue {
+    display: flex;
+  }
+  
+  .utilitiesValue > p {
+    margin-right: 0.5rem;
+    color: #818080;
+  }
+  
+  #area {
+    color: #818080;
+  }
+  
+  .description {
+    text-align: justify;
+    margin-top: 1rem;
+  }
+  
+  .description > p {
+    font-family: "Nuninto";
+    font-size: 0.8rem;
+  }
+  
+  .actionButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .actionButtons > button {
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 0.625rem;
+    background: #8d74cc;
+    color: #000000;
+    font-family: "Nuninto-Bold";
+    text-transform: capitalize;
+    border: none;
+  }
+  
+  .actionButtons > button:hover {
+    border: 2px solid #8d74cc;
+    background: #fff;
+  }
+  
+  .right {
+    margin-left: 3rem;
+    margin-top: 4rem;
+  }
+  
+  .devProfile {
+    border: 2px solid #b9b9b9;
+    width: 20rem;
+    height: 18rem;
+    border-radius: 2rem;
+    text-align: center;
+  }
+  
+  .devProfile > .avatar {
+    margin-top: 3rem;
+  }
+  .devProfile > h3 {
+    font-family: "Nuninto-Semi";
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .devProfile > p {
+    font-family: "Nuninto";
+    font-size: 0.8rem;
+    color: #b9b9b9;
+    margin-top: 1.5rem;
+  }
+  
+  .devProfile > button {
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 0.625rem;
+    background: #8d74cc;
+    color: #000000;
+    font-family: "Nuninto-Bold";
+    text-transform: capitalize;
+    border: none;
+    margin-top: 1.5rem;
+  }
+  
+  .devProfile > button:hover {
+    border: 2px solid #8d74cc;
+    background: #fff;
+  }
+  
+  .analytics > h3 {
+      font-family: "Nuninto-Bold";
+      font-size: 1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  .analyticsbody {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+  }
+  
+  .investmentProgress {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  }
+  
+  .tokenProgress{
+      margin-top: 1.5rem;
+      margin-left: 2rem;
+  }
+  .tokenProgress > p{
+      font-family: "Nuninto-Semi";
+  }
+  
+  .tokenProgress >p > .value{
+      color: #8d74cc;
+  }
+  
