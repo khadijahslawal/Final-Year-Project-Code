@@ -18,10 +18,12 @@ Install MetaMask Wallet - Chrome Webstore
 Visit [Rinkbey Faucet](https://faucet.rinkeby.io/)
 
 **Running the code (via code folder)**
-1. navigate to root file of the folder on the command line
-2. run "npm run dev"
-3. wait until it shows ready on localhost:3000
-4. copy localhost:3000 on your browser
+1. navigate to root of the folder on the command line (i.e Blockchain app code) 
+2. run "npm install" to install node modules
+3. confirm node modules folder is installed
+4. then run "npm run dev" in the same root folder (I.e blockchain app code )
+5. wait until it shows ready on localhost:3000
+6. copy localhost:3000 on your browser
 
 **Running the code (via github)**
 1. clone repository
