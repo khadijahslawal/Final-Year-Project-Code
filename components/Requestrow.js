@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Table, Button } from "semantic-ui-react";
 import web3 from "../blockchain/web3";
 import Property from "../blockchain/property";
+import styles from "./requestrow.module.css";
 
 class RequestRow extends Component {
   onApprove = async () => {
@@ -27,25 +28,26 @@ class RequestRow extends Component {
       <Table.Row
         disabled={request.complete}
         positive={!!readyToFinalize && !request.rentalRequestCompleted}
+        className={styles.tablerow}
       >
-        <Table.Cell>{id}</Table.Cell>
-        <Table.Cell>{web3.utils.fromWei(request.proposedRentalPrice, "ether")}</Table.Cell>
-        <Table.Cell>{request.rentalSeeker}</Table.Cell>
-        <Table.Cell>
+        <Table.Cell className={styles.cell}>{id}</Table.Cell>
+        <Table.Cell className={styles.cell}>{web3.utils.fromWei(request.proposedRentalPrice, "ether")}</Table.Cell>
+        <Table.Cell className={styles.cell}>{request.rentalSeeker}</Table.Cell>
+        <Table.Cell className={styles.cell}>
           {request.approvalCount}/{numInvestors}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell className={styles.cell}>
           {request.rentalRequestCompleted ? null : (
-            <Button color="green" basic onClick={this.onApprove}>
+            <button  onClick={this.onApprove}>
               Approve
-            </Button>
+            </button>
           )}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell className={styles.cell}>
           {request.rentalRequestCompleted ? null : (
-            <Button color="teal" basic onClick={this.onFinalize}>
+            <button basic onClick={this.onFinalize}>
               Finalize
-            </Button>
+            </button>
           )}
         </Table.Cell>
       </Table.Row>

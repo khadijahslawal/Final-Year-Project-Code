@@ -90,4 +90,26 @@
   .header > h3{
     font-family: "Nuninto-Bold";
     font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
+  
+
+  .cellheader{
+    font-family: "Nuninto-Semi";
+    text-align: center;
+
+  }
+
+  .requestNum{
+    margin-left: 30%;
+  }
+
+  .requestNum > h3{
+    font-family: "Nuninto-Semi";
+    margin-bottom: 1rem;
+  }
+
+  
+.tablerow{
+  border: 3px solid #8d74cc !important;
+}
