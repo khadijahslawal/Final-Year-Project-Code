@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Nuninto-Semi";
+  src: url("../public/fonts/Nunito-SemiBold.ttf");
+}
+
+.sideNav {
+  float: left;
+  height: 100vh;
+  width: 18%;
+  background: #b198ef;
+  padding-top: 3rem;
+  position: fixed;
+  z-index: 1000;
+}
+
+.sideNav > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3rem;
+}
+
+.sideNav > h1 {
+  font-family: "Nuninto-Semi";
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.avatarsection:hover{
+    background-color: white;
+}
+.avatarsection > .avatar {
+  margin-left: 5.5rem;
+  /* margin-bottom: 1.5rem;
+  padding: 0.5rem 0rem; */
+  padding: 1.2rem 0rem;
+}
+
+
+.sideBarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nuninto-Semi";
+}
+
+.row:hover {
+  background: white;
+}
+
+#icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+#title {
+  flex: 70%;
+}
+
+#active {
+  color: #eceaf2;
+}

@@ -14,4 +14,5 @@ routes.add("/deployed/:address", "/deployed/index");
 routes.add("/deployed/invest/:address", "/deployed/invest");
 routes.add("/deployed/rent/:address", "/deployed/rent");
 routes.add("/dashboard", "/dashboard/index");
+routes.add("/voting", "/voting/index");
 module.exports = routes;

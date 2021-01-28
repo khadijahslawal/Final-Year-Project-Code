@@ -117,9 +117,8 @@ import VotingIcon from "../../public/icons/manualvoting.png";
 import logo from "../../public/icons/mozy.png";
 import styles from "../../components/voting.module.css";
 
-import Layout from "../../components/layout";
-import Property from "../../blockchain/property";
 import factory from "../../blockchain/propertyFactory";
+import Property from "../../blockchain/property";
 import { Button, Table } from "semantic-ui-react";
 import { Link } from "../../routes";
 import RequestRow from "../../components/Requestrow";
@@ -127,10 +126,8 @@ import { Router } from "../../routes";
 
 class RentalRequestsIndex extends Component {
   static async getInitialProps() {
-    const propertyAddress = await factory.methods
-      .getDeployedProperties()
-      .call();
-    const property = Property(propertyAddress[0]);
+    const propertyAddress =  `0x58b77d8541397bd31D56e504eaC785C1DE386218`
+    const property = await Property(propertyAddress);
     const requestCount = await property.methods.getRentalRequestCount().call();
     const approversCount = await property.methods.numInvestors().call();
 
