@@ -5,35 +5,106 @@ import bedIcon from "../../public/icons/bed.png";
 import bathIcon from "../../public/icons/bath.png";
 import Avatar from "react-avatar";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import { Router } from "../../routes";
-import  Property  from "../../blockchain/property";
+import { Link, Router } from "../../routes";
+import Property from "../../blockchain/property";
+import logo from "../../public/icons/mozy.png";
+import profileIcon from "../../public/icons/user.png";
+import DiscoverIcon from "../../public/icons/discover.png";
+import DashboardIcon from "../../public/icons/dashboard.png";
+import VotingIcon from "../../public/icons/manualvoting.png";
+
 
 export class ShowDeployed extends Component {
   static async getInitialProps(props) {
     const property = Property(props.query.address);
     const summary = await property.methods.getPropertyDetails().call();
-    return {
-     address: props.query.address,
-     symbol : summary[1],
-     tokenPrice: summary[2],
-     initialSupply: summary[3],
-     currentSupply: summary[4],
-     valuationPrice: summary[5],
-     isRented: summary[6]
-   };
-}
+    return{
+      address: props.query.address,
+      symbol: summary[1],
+      tokenPrice: summary[2],
+      initialSupply: summary[3],
+      currentSupply: summary[4],
+      valuationPrice: summary[5],
+      isRented: summary[6],
+    };
+    // const { address, symbol, tokenPrice, initialSupply, currentSupply, valuationPrice, isRented} = this.values;
+  }
   render() {
-    // const [images, setImages] = useState([]);
-    const investPage = () => {
-        // Router.pushRoute(`{address/invest`);
-    }
     const percentage = 0;
     return (
       <>
+        <div className={styles.sideNav} style={{ float: "left" }}>
+          <Link route={`/home/${this.props.address}`}>
+            <img
+              src={logo}
+              onClick={() => {
+                alert(investorAddress);
+              }}
+            />
+          </Link>
+          <ul className={styles.sideBarList}>
+            <Link route={`/profile/${this.props.address}`}>
+              <li
+                className={styles.row}
+              >
+                <div id={styles.icon}>
+                  <img
+                    src={profileIcon}
+                    style={{ width: "24px", height: "24px" }}
+                  />
+                </div>
+                <div id={styles.title}>Profile</div>
+              </li>
+            </Link>
+            <li
+              className={styles.row}
+              onClick={() => {
+                Router.pushRoute(`/discover`);
+              }}
+            >
+              <div id={styles.icon}>
+                {" "}
+                <img
+                  src={DiscoverIcon}
+                  style={{ width: "24px", height: "18px" }}
+                />
+              </div>
+              <div id={styles.title}>Discover</div>
+            </li>
+            <li
+              className={styles.row}
+              onClick={() => {
+                Router.pushRoute(`dashboard/${this.props.address}`);
+              }}
+            >
+              <div id={styles.icon}>
+                <img
+                  src={DashboardIcon}
+                  style={{ width: "24px", height: "24px" }}
+                />
+              </div>
+              <div id={styles.title}>Dashboard</div>
+            </li>
+            <li
+              className={styles.row}
+              onClick={() => {
+                Router.pushRoute(`voting/${this.props.address}`);
+              }}
+            >
+              <div id={styles.icon}>
+                {" "}
+                <img
+                  src={VotingIcon}
+                  style={{ width: "24px", height: "24px" }}
+                />
+              </div>
+              <div id={styles.title}>Voting</div>
+            </li>
+          </ul>
+        </div>
         <main className={styles.main} style={{ float: "right", width: "82%" }}>
           <section className={styles.left}>
             <h1>2992, Barnes Avenue</h1>
-            {/* Add image sliding component - https://dev.to/jasonmeidev/making-a-simple-image-slider-in-react-js-1gbb*/}
             <img src={propImage} width="500px" height="300px" />
             <h3>Williams bridge, Knox</h3>
             <article className={styles.utilities}>
@@ -65,7 +136,7 @@ export class ShowDeployed extends Component {
               </p>
             </div>
             <div className={styles.actionButtons}>
-              <button onClick={investPage}>Invest</button>
+              <button>Invest</button>
               <button>Rent</button>
             </div>
           </section>
@@ -87,28 +158,33 @@ export class ShowDeployed extends Component {
             <section className={styles.analytics}>
               <h3>Property Analytics</h3>
               <div className={styles.analyticsbody}>
-              <div className={styles.investmentProgress}>
-                <CircularProgressbar
-                  value={percentage}
-                  text={`${percentage}%`}
-                  styles={buildStyles({
-                    pathColor: `rgb(177, 152, 239)`,
-                    text: {
-                      fill: "#f88",
-                      textSize: '10px',
-                      textAlign: 'center'
-                    },
-                  })}
-                />
-              </div>
+                <div className={styles.investmentProgress}>
+                  <CircularProgressbar
+                    value={percentage}
+                    text={`${percentage}%`}
+                    styles={buildStyles({
+                      pathColor: `rgb(177, 152, 239)`,
+                      text: {
+                        fill: "#f88",
+                        textSize: "10px",
+                        textAlign: "center",
+                      },
+                    })}
+                  />
+                </div>
 
-              <div className={styles.tokenProgress}>
-                  <p>Tokens Issued: <span className={styles.value}>200</span></p>
-                  <p>Tokens Sold: <span className={styles.value}>1</span></p>
-                  <p>Token Price: <span className={styles.value}>12</span></p>
+                <div className={styles.tokenProgress}>
+                  <p>
+                    Tokens Issued: <span className={styles.value}>{this.props.initialSupply}</span>
+                  </p>
+                  <p>
+                    Tokens Sold: <span className={styles.value}>{this.props.currentSupply}</span>
+                  </p>
+                  <p>
+                    Token Price: <span className={styles.value}>{this.props.tokenPrice}</span>
+                  </p>
+                </div>
               </div>
-              </div>
-           
             </section>
           </section>
         </main>
