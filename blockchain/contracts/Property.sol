@@ -196,7 +196,7 @@ contract PropertyContract {
         rentalRequests.push(newRequest);
     }
 
-    function finalizeRequest(uint256 indexOfRequest) public onlyDeveloper {
+    function finalizeRequest(uint256 indexOfRequest) public  {
         RentalRequest storage request = rentalRequests[indexOfRequest];
         require(!request.rentalRequestCompleted);
         require(request.approvalCount >= (numInvestors / 2));
@@ -227,5 +227,9 @@ contract PropertyContract {
     modifier onlyTenat() {
         require(msg.sender == tenant);
         _;
+    }
+
+     function getRentalRequestCount()public view returns(uint){
+        return rentalRequests.length;
     }
 }

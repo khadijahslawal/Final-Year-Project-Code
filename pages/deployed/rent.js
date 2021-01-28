@@ -1,44 +1,51 @@
 import React, { Component } from "react";
 import { Link, Router } from "../../routes";
-import styles from "../../components/invest.module.css";
+import styles from "../../components/rent.module.css";
 import Property from "../../blockchain/property";
 import logo from "../../public/icons/mozy.png";
 import profileIcon from "../../public/icons/user.png";
 import DiscoverIcon from "../../public/icons/discover.png";
 import DashboardIcon from "../../public/icons/dashboard.png";
 import VotingIcon from "../../public/icons/manualvoting.png";
-import BackIcon from "../../public/icons/arrowback.png";
 import web3 from "../../blockchain/web3";
 
-export class InvestPage extends Component {
-  state = {
-    tokensAmount: "",
-    investment: "",
-    errorMessage: "",
-  };
-
-  static async getInitialProps(props) {
-    const { address } = props.query;
-    return { address };
-  }
-
-  onSubmit = async (event) => {
-    event.preventDefault();
-    const property = Property(this.props.address);
-    this.setState({ errorMessage: "" });
-    try {
-      const accounts = await web3.eth.getAccounts();
-      await property.methods.invest(this.state.tokensAmount).send({
-        from: accounts[0],
-        value: web3.utils.toWei(this.state.investment, "ether"),
-      });
-      Router.replaceRoute(`/deployed/${this.props.address}`);
-    } catch (err) {
-      this.setState({ errorMessage: err.message });
-    }
-
-    this.setState({investment: "" });
-  };
+export class RentIndex extends Component {
+    state = {
+        rentalPrice: "",
+        renter: "",
+        errorMessage: "",
+      };
+    
+      static async getInitialProps(props) {
+        const { address } = props.query;
+        return { address };
+      }
+    
+      onSubmit = async (event) => {
+        event.preventDefault();
+        const property = Property(this.props.address);
+        const { rentalPrice, renter } = this.state;
+    
+        this.setState({ errorMessage: "" });
+    
+        try {
+          const accounts = await web3.eth.getAccounts();
+          await property.methods
+            .createRentalRequests(web3.utils.toWei(rentalPrice, "ether"))
+            .send({
+              from: accounts[0],
+            });
+          Router.pushRoute(`/voting`);
+        } catch (err) {
+          this.setState({ errorMessage: err.message });
+        }
+    
+        this.setState({
+          rentalPrice: "",
+          recipient: "",
+        });
+      };
+    
   render() {
     return (
       <>
@@ -107,7 +114,7 @@ export class InvestPage extends Component {
         <main className={styles.main} style={{ float: "right", width: "82%" }}>
           <section className={styles.contentSection}>
             <section className={styles.contentHeader}>
-              <h1>Invest in 2922, Barnes Avenue</h1>
+              <h1>Rent 2922, Barnes Avenue</h1>
               {/* Write Properties statisitcs somewhere */}
             </section>
             <form
@@ -117,25 +124,15 @@ export class InvestPage extends Component {
             >
               <input
                 type="text"
-                placeholder="Tokens Quantity"
-                value={this.state.tokensAmount}
-                onChange={(event) =>
-                  this.setState({ tokensAmount: event.target.value })
-                }
-              />
-              <input
-                type="text"
-                placeholder="Investment Amount"
-                value={this.state.investment}
-                onChange={(event) =>
-                  this.setState({ investment: event.target.value })
-                }
+                placeholder="Desired Rental Price in Ether"
+                value={this.state.rentalPrice}
+                onChange={(event) => this.setState({ rentalPrice: event.target.value })}
               />
               {/* State updates the investment total Price */}
-              <button> Make Payment </button>
+              <button> Send Rental Request </button>
             </form>
             <div className={styles.errorMessage}>
-                <p>{this.state.errorMessage}</p>
+              <p>{this.state.errorMessage}</p>
             </div>
           </section>
         </main>
@@ -144,4 +141,4 @@ export class InvestPage extends Component {
   }
 }
 
-export default InvestPage;
+export default RentIndex;

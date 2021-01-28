@@ -139,7 +139,9 @@ export class ShowDeployed extends Component {
               <Link route={`/deployed/invest/${this.props.address}`}>
                 <button>Invest</button>
               </Link>
+              <Link route={`/deployed/rent/${this.props.address}`}>
               <button>Rent</button>
+              </Link>
             </div>
           </section>
 

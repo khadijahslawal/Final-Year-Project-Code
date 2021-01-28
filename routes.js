@@ -12,5 +12,6 @@ routes.add("/profile", "/profile/index");
 routes.add("/discover", "/discover/index");
 routes.add("/deployed/:address", "/deployed/index");
 routes.add("/deployed/invest/:address", "/deployed/invest");
+routes.add("/deployed/rent/:address", "/deployed/rent");
 routes.add("/dashboard", "/dashboard/index");
 module.exports = routes;

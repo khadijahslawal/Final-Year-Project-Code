@@ -3,7 +3,7 @@ import PropertyFactory from "./build/PropertyFactory.json";
 
 const instance = new web3.eth.Contract(
     PropertyFactory.abi,
-    "0xbf92dF778840e8b166cADfa2Cdc43aD544f634B2"
+    "0xc2b0805BF93F353799B58C767951742801aE8cB9"
   );
   
   export default instance;
