@@ -29,3 +29,6 @@ Visit [Rinkbey Faucet](https://faucet.rinkeby.io/)
 3. run "npm install" to download node modules
 4. ensure node modules have been install
 5. run the application using "npm run dev" on the command line 
+
+**For interacting with the Meta Mask**
+When interacting as a renter, investor, or developer; change your account on the meta mask. Hence why you need three different accounts
