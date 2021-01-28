@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "Nuninto-Bold";
+    src: url("../public/fonts/Nunito-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto-Semi";
+    src: url("../public/fonts/Nunito-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto";
+    src: url("../public/fonts/Nunito-Regular.ttf");
+  }
+  
+  .sideNav {
+    float: left;
+    height: 100vh;
+    width: 18%;
+    background: #b198ef;
+    padding-top: 3rem;
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  .sideNav > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    width: 3rem;
+  }
+  
+  .avatarsection:hover {
+    background-color: white;
+  }
+  .avatarsection > .avatar {
+    margin-left: 5.5rem;
+    /* margin-bottom: 1.5rem;
+    padding: 0.5rem 0rem; */
+    padding: 1.2rem 0rem;
+  }
+  
+  .sideBarList {
+    height: auto;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .row {
+    width: 100%;
+    height: 60px;
+    list-style-type: none;
+    margin: 2rem 0rem;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nuninto-Semi";
+  }
+  
+  .row:hover {
+    background: white;
+  }
+  
+  #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+  }
+  
+  #title {
+    flex: 70%;
+  }
+  
+  #active {
+    color: #eceaf2;
+  }
+
+  .main {
+    /* height: 100vh;
+      overflow-y: scroll; */
+    width: 100vw;
+    height: 100%;
+  }
+  
+  .profileDetails {
+    padding: 3rem 0rem 0rem 5rem;
+  }
+  
+  .profileDetails > h1 {
+    font-family: "Nuninto-Bold";
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .top {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .bottom {
+    display: flex;
+  }
+  .firstName > p {
+    font-size: 0.9rem;
+    color: #b9b9b9;
+    font-family: "Nuninto-Semi";
+    margin-bottom: 0.7rem;
+  }
+  .firstName > .value {
+    background-color: #efefef;
+    border: none;
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    color: #b9b9b9;
+  }
+  
+  .lastName {
+    margin-left: 8rem;
+  }
+  .lastName > p {
+    font-size: 0.9rem;
+    color: #b9b9b9;
+    font-family: "Nuninto-Semi";
+    margin-bottom: 0.7rem;
+  }
+  .lastName > .value {
+    background-color: #efefef;
+    border: none;
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    color: #b9b9b9;
+  }
+  
+  .email > p {
+    font-size: 0.9rem;
+    color: #b9b9b9;
+    font-family: "Nuninto-Semi";
+    margin-bottom: 0.7rem;
+  }
+  .email > .value {
+    background-color: #efefef;
+    border: none;
+    width: 13rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    color: #b9b9b9;
+  }
+  
+  .ethAddress {
+    margin-left: 5rem;
+  }
+  .ethAddress > p {
+    font-size: 0.9rem;
+    color: #b9b9b9;
+    font-family: "Nuninto-Semi";
+    margin-bottom: 0.7rem;
+  }
+  .ethAddress > .value {
+    background-color: #efefef;
+    border: none;
+    width: 25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    color: #b9b9b9;
+  }
+  
+  /* Verification Component */
+  .verificationSection {
+    padding: 3rem 0rem 0rem 5rem;
+  }
+  
+  .verificationSection > h1 {
+    font-family: "Nuninto-Bold";
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .verificationDetails {
+    display: flex;
+  }
+  .verificationResults {
+    border: 2px solid #B198EF;
+    width: 20rem;
+    text-align: center;
+    padding: 3rem 0rem;
+    border-radius: 0.8rem;
+  }
+  
+  .verificationResults > h3 {
+    font-family: "Nuninto-Semi";
+    color: #b9b9b9;
+    margin-bottom: 0.2rem;
+  }
+  
+  .verificationResults > p {
+    font-family: "Nuninto-Bold";
+    color: gray;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .attachment {
+    margin-left: 10rem;
+  }
+  
+  .attachment > h3 {
+    font-family: "Nuninto-Semi";
+    color: black;
+    font-size: 1.2rem;
+  }
+  
+  .attachment > .file {
+    font-family: "Nuninto";
+    font-size: 1rem;
+    background-color: #eceaf2;
+    width: 15rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    margin: 0.8rem 0rem;
+  }
+  
+  .span {
+    margin-right: 0.5rem;
+  }
+  
+  #docResultsText {
+    color: #b9b9b9;
+    font-family: "Nuninto";
+    font-size: 1rem;
+  }
+  

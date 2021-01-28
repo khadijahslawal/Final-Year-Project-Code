@@ -43,7 +43,7 @@ export class ShowDeployed extends Component {
             />
           </Link>
           <ul className={styles.sideBarList}>
-            <Link route={`/profile/${this.props.address}`}>
+            <Link route={`/profile`}>
               <li
                 className={styles.row}
               >
@@ -74,7 +74,7 @@ export class ShowDeployed extends Component {
             <li
               className={styles.row}
               onClick={() => {
-                Router.pushRoute(`dashboard/${this.props.address}`);
+                Router.pushRoute(`dashboard`);
               }}
             >
               <div id={styles.icon}>
@@ -88,7 +88,7 @@ export class ShowDeployed extends Component {
             <li
               className={styles.row}
               onClick={() => {
-                Router.pushRoute(`voting/${this.props.address}`);
+                Router.pushRoute(`/voting`);
               }}
             >
               <div id={styles.icon}>
@@ -136,7 +136,9 @@ export class ShowDeployed extends Component {
               </p>
             </div>
             <div className={styles.actionButtons}>
-              <button>Invest</button>
+              <Link route={`/deployed/invest/${this.props.address}`}>
+                <button>Invest</button>
+              </Link>
               <button>Rent</button>
             </div>
           </section>

@@ -20,11 +20,12 @@
   },
   "homepage": "https://github.com/khadijahslawal/Final-Year-Project-Code#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "@truffle/hdwallet-provider": "^1.2.1",
     "dotenv": "^8.2.0",
     "fs-extra": "^9.1.0",
     "mocha": "^8.2.1",
-    "next": "^9.5.3",
+    "next": "^9.5.5",
     "next-connect": "^0.9.1",
     "next-images": "^1.7.0",
     "next-routes": "^1.4.2",

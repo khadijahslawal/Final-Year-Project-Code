@@ -8,8 +8,9 @@ routes.add("/signup/developer", "/signup/developer");
 routes.add("/signup/investor", "/signup/investor");
 routes.add("/signup/welcome", "/signup/welcome");
 routes.add("/home/:address", "/home/index");
-routes.add("/profile/:address", "/home/profile");
+routes.add("/profile", "/profile/index");
 routes.add("/discover", "/discover/index");
 routes.add("/deployed/:address", "/deployed/index");
-
+routes.add("/deployed/invest/:address", "/deployed/invest");
+routes.add("/dashboard", "/dashboard/index");
 module.exports = routes;

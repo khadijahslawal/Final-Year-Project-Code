@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Property from "../../components/propertycard";
 import { nondeployed } from "./nondeployed";
 import styles from "../../components/discover.module.css";
-import verifiedPropertyImage from "../../public/images/propImage.jpg";
+import verifiedPropertyImage from "../../public/images/propertyimage.jpg";
 import factory from "../../blockchain/propertyFactory";
 import { Router } from "../../routes";
 import { Link } from "../../routes";
@@ -64,7 +64,7 @@ export class DiscoverIndex extends Component {
             <li
               className={styles.row}
               onClick={() => {
-                Router.pushRoute(`dashboard/${this.props.investorAddress}`);
+                Router.pushRoute(`dashboard`);
               }}
             >
               <div id={styles.icon}>
@@ -78,7 +78,7 @@ export class DiscoverIndex extends Component {
             <li
               className={styles.row}
               onClick={() => {
-                Router.pushRoute(`voting/${this.props.investorAddress}`);
+                Router.pushRoute(`/voting`);
               }}
             >
               <div id={styles.icon}>

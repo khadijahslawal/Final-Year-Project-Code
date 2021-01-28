@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "Nuninto-Bold";
+    src: url("../public/fonts/Nunito-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto-Semi";
+    src: url("../public/fonts/Nunito-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nuninto";
+    src: url("../public/fonts/Nunito-Regular.ttf");
+  }
+  
+
+  .sideNav {
+    float: left;
+    height: 100vh;
+    width: 18%;
+    background: #b198ef;
+    padding-top: 3rem;
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  .sideNav > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    width: 3rem;
+  }
+  
+  .avatarsection:hover {
+    background-color: white;
+  }
+  .avatarsection > .avatar {
+    margin-left: 5.5rem;
+    /* margin-bottom: 1.5rem;
+    padding: 0.5rem 0rem; */
+    padding: 1.2rem 0rem;
+  }
+  
+  .sideBarList {
+    height: auto;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .row {
+    width: 100%;
+    height: 60px;
+    list-style-type: none;
+    margin: 2rem 0rem;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nuninto-Semi";
+  }
+  
+  .row:hover {
+    background: white;
+  }
+  
+  #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+  }
+  
+  #title {
+    flex: 70%;
+  }
+  
+  #active {
+    color: #eceaf2;
+  }
+  
+
+  .main {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+  }
+  
+  .left {
+    padding: 3rem 0rem 0rem 5rem;
+  }
+  
+  .networth {
+    width: 20rem;
+    height: 10rem;
+    background-color: #ff9797;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    /* box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75); */
+  }
+  
+  .networth > h3 {
+    font-family: "Nuninto-Semi";
+    font-size: 1.5rem;
+    color: #818080;
+    margin: 1rem 0rem;
+  }
+  
+  .networth > h5 {
+    font-family: "Nuninto-Bold";
+    color: black;
+    font-size: 2rem;
+  }
+  
+  .transactionsSection {
+    margin-top: 5rem;
+  }
+  
+  .transactionHeader {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .transactionHeader > h3 {
+    font-family: "Nuninto-Semi";
+    font-size: 1rem;
+  }
+  
+  .transactionHeader > p {
+    font-family: "Nuninto";
+    color: #b9b9b9;
+    margin-left: 12rem;
+  }
+  
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .transaction > .increaseIcon {
+    background-color: #82ec97;
+    width: 2.8rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.2rem 0rem;
+  }
+  
+  .transaction > .decreaseIcon {
+    background-color: #ff9797;
+    width: 2.8rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.2rem 0rem;
+  }
+  
+  .decreaseValue {
+    color: #ff9797;
+  }
+  .right {
+    margin-left: 5rem;
+    margin-top: 3rem;
+  }
+  .propertiesSection {
+    width: 20rem;
+    padding: 1rem 3rem;
+  }
+  
+  .propertiesHeader {
+    display: flex;
+    margin: 1rem 0rem;
+    justify-content: space-between;
+  }
+  
+  .propertiesHeader > h3{
+      font-family: "Nuninto-Semi";
+      font-size: 1rem;
+    
+  }
+  
+  .propertiesHeader > p{
+      font-family: "Nuninto";
+      font-size: 0.7rem;
+      color: #818080;
+    
+  }
+  
+  .properties{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+  }
+  
+  .properties > h3{
+      font-family: "Nuninto-Semi";
+      font-size: 1rem;
+  }
+  .properties > p{
+      font-family: "Nuninto";
+      font-size: 0.8rem;
+  }
+  
