@@ -37,3 +37,10 @@ Visit [Rinkbey Faucet](https://faucet.rinkeby.io/)
 
 **For interacting with the Meta Mask**
 When interacting as a renter, investor, or developer; change your account on the meta mask. Hence why you need three different accounts
+
+
+### To run image hashing code
+1. navigate to the code folder
+2. type "python phash.py" in the command line
+3. images are already supplied in the folder
+4. To change the images, ensure the new images have the same names as the previous ones and delete the previous ones or manually chnage the code to read the new images
